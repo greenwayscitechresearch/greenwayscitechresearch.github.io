@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Greenway Sci-Tech &amp; Research Society</title>
+<meta name="description" content="Greenway Sci-Tech & Research Society: a student community for hands-on chemistry, biology, physics, technology and research.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%A7%AA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Living background -->
+<div class="aurora" aria-hidden="true"><i class="b1"></i><i class="b2"></i><i class="b3"></i><i class="b4"></i></div>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="veil" aria-hidden="true"></div>
+
+<!-- Navigation -->
+<header class="nav-shell">
+  <nav class="nav glass" aria-label="Main">
+    <a class="brand" href="#/home" data-link="home" aria-label="Greenway Sci-Tech &amp; Research Society, home">
+      <img data-logo="mark" src="assets/logo-mark.webp" alt="" width="94" height="34">
+      <span class="brand-text"><b>Greenway</b><small>Sci-Tech &amp; Research Society</small></span>
+    </a>
+    <ul class="links">
+      <li><a href="#/home" data-link="home">Home</a></li>
+      <li><a href="#/about" data-link="about">About</a></li>
+      <li><a href="#/events" data-link="events">Events</a></li>
+      <li><a href="#/projects" data-link="projects">Projects</a></li>
+      <li><a href="#/publications" data-link="publications">Publications</a></li>
+      <li><a href="#/contact" data-link="contact">Contact</a></li>
+    </ul>
+    <a class="btn btn-primary nav-cta" href="#/join" data-link="join">Join Us</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span data-ic="menu" data-s="22"></span></button>
+  </nav>
+</header>
+<div class="menu glass" id="menu">
+  <a href="#/home" data-link="home">Home</a>
+  <a href="#/about" data-link="about">About</a>
+  <a href="#/events" data-link="events">Events</a>
+  <a href="#/projects" data-link="projects">Projects</a>
+  <a href="#/publications" data-link="publications">Publications</a>
+  <a href="#/contact" data-link="contact">Contact</a>
+  <a class="join" href="#/join" data-link="join">Join Us</a>
+</div>
+
+<main id="main">
+
+<!-- ================= HOME ================= -->
+<section class="page" id="page-home">
+  <div class="wrap hero">
+    <div>
+      <h1><span style="--i:0">Ask sharper questions.</span><span style="--i:1">Build crazy things.</span><span style="--i:2">Show the world what works.</span></h1>
+      <p class="lead">বিজ্ঞান কেবল পাঠ্যবইয়ের পাতায় বন্দি কোনো বিষয় নয়—আসল বিজ্ঞান তো তখনই শুরু হয় যখন তুমি নিজে হাতে-কলমে নামবে, নতুন আইডিয়া পরীক্ষা করবে এবং নিজের চোখে ফলাফল দেখবে। আগামী দিনের উদ্ভাবক, ডেভলপার আর আবিষ্কারকদের যাত্রাপথে স্বাগতম!</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#/join" data-link="join">Join the society</a>
+        <a class="btn btn-ghost" href="#/events" data-link="events">See upcoming events</a>
+      </div>
+      <div class="next glass" id="nextCard">
+        <div><small>Next event</small><strong id="nextTitle">Loading</strong></div>
+        <div class="cd" id="cd" role="timer" aria-label="Time until next event">
+          <div><b id="cdD">00</b><span>days</span></div>
+          <div><b id="cdH">00</b><span>hours</span></div>
+          <div><b id="cdM">00</b><span>min</span></div>
+          <div><b id="cdS">00</b><span>sec</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="logo-wrap">
+      <div class="logo-stage glass"><img data-logo="full" src="assets/logo-full.webp" alt="Greenway Sci-Tech &amp; Research Society logo: a flask, DNA helix, microchip and microscope" width="1000" height="751"></div>
+    </div>
+  </div>
+
+  <div class="wrap section">
+    <div class="sec-head">
+      <h2>Four ways into science</h2>
+      <p>Pick the area that pulls you in, or move between them. Most good questions cross the lines.</p>
+    </div>
+    <div class="grid wings" id="homeWings"></div>
+  </div>
+
+  <div class="wrap section">
+    <div class="sec-head">
+      <h2>Coming up</h2>
+      <a class="linkbtn" href="#/events" data-link="events">View all events</a>
+    </div>
+    <div class="list" id="homeEvents"></div>
+  </div>
+
+  <div class="wrap section">
+    <div class="sec-head">
+      <h2>What members are building</h2>
+      <a class="linkbtn" href="#/projects" data-link="projects">View all projects</a>
+    </div>
+    <div class="grid projects" id="homeProjects"></div>
+  </div>
+
+  <div class="wrap section">
+    <div class="banner glass">
+      <div>
+        <img data-logo="mark" src="assets/logo-mark.webp" alt="Greenway Sci-Tech & Research Society" width="122" height="44">
+        <p>A student community for hands-on chemistry, biology, physics, technology and research.</p>
+      </div>
+      <a class="btn btn-primary" href="#/join" data-link="join">Apply to join</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="page" id="page-about">
+  <div class="wrap">
+    <div class="page-head">
+      <h1>About the society</h1>
+      <p>We are a student-run community that learns science by doing it: at the bench, at the keyboard and in the field.</p>
+    </div>
+  </div>
+  <div class="wrap section">
+    <div class="split">
+      <div class="prose">
+        <p>Greenway Sci-Tech &amp; Research Society began with a simple idea: science makes more sense when you do it with your own hands.</p>
+        <p>We run workshops, build projects and share what we learn, so every member leaves with something they made or discovered. Beginners are welcome, and so are people who already know their way around a lab.</p>
+        <p>Our work covers four areas: chemistry, biology, physics and technology, and research methods. Members move between them freely.</p>
+      </div>
+      <div class="tenets glass">
+        <div><h3>Mission</h3><p>To make hands-on science open to every member and turn curiosity into work that others can read and build on.</p></div>
+        <div><h3>Vision</h3><p>A community where students design their own experiments, publish their findings and take on real problems.</p></div>
+        <div><h3>Values</h3><p>Curiosity, lab safety, honest data, and sharing what we learn.</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap section">
+    <div class="sec-head"><h2>How a project runs</h2><p>Every project follows the same four steps, whatever the subject.</p></div>
+    <div class="grid steps">
+      <div class="step glass"><div class="n">1</div><h3>Ask a question</h3><p>Pick something you genuinely want to find out and write it down clearly.</p></div>
+      <div class="step glass"><div class="n">2</div><h3>Plan the method</h3><p>Decide what to measure, what to build and how to keep it safe.</p></div>
+      <div class="step glass"><div class="n">3</div><h3>Build and test</h3><p>Run the experiment, record the data and repeat until the results hold up.</p></div>
+      <div class="step glass"><div class="n">4</div><h3>Share the results</h3><p>Present at an event or write it up for our publications page.</p></div>
+    </div>
+  </div>
+  <div class="wrap section">
+    <div class="sec-head"><h2>Executive panel</h2><p>The members who run the society this term.</p></div>
+    <div class="grid team" id="team"></div>
+  </div>
+</section>
+
+<!-- ================= EVENTS ================= -->
+<section class="page" id="page-events">
+  <div class="wrap">
+    <div class="page-head">
+      <h1>Events</h1>
+      <p>Workshops, seminars, competitions and our annual science fair. Register your interest and we'll confirm your place.</p>
+    </div>
+    <div class="tools">
+      <div class="chips" id="evTabs" role="group" aria-label="Filter by time"></div>
+      <div class="chips" id="evWings" role="group" aria-label="Filter by area"></div>
+    </div>
+    <div class="list" id="eventList" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section class="page" id="page-projects">
+  <div class="wrap">
+    <div class="page-head">
+      <h1>Projects</h1>
+      <p>Member-led work from across the society. Some are finished, some are running now, and some are looking for people.</p>
+    </div>
+    <div class="tools"><div class="chips" id="prWings" role="group" aria-label="Filter by area"></div></div>
+    <div class="grid projects" id="projectList" aria-live="polite"></div>
+    <div class="callout glass">
+      <div><h3>Have a project idea?</h3><p>Pitch it to the executive panel. If it is safe and testable, we'll help you find a team and a bench.</p></div>
+      <a class="btn btn-primary" href="#/contact" data-link="contact" data-topic="Project collaboration">Pitch your idea</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PUBLICATIONS ================= -->
+<section class="page" id="page-publications">
+  <div class="wrap">
+    <div class="page-head">
+      <h1>Publications</h1>
+      <p>Papers, posters and newsletters written by our members. Every entry has a citation you can copy.</p>
+    </div>
+    <div class="tools">
+      <div class="search">
+        <span data-ic="search" data-s="18"></span>
+        <label class="sr" for="pubSearch">Search publications</label>
+        <input id="pubSearch" type="search" placeholder="Search by title or author" autocomplete="off">
+      </div>
+      <div class="chips" id="pubTypes" role="group" aria-label="Filter by type"></div>
+    </div>
+    <p class="count" id="pubCount" aria-live="polite"></p>
+    <div class="pubs glass" id="pubList"></div>
+    <div class="callout glass">
+      <div><h3>Want to be published?</h3><p>Send us your abstract or draft. Our research team will give feedback and help you prepare it for the next issue.</p></div>
+      <a class="btn btn-primary" href="#/contact" data-link="contact" data-topic="Publication or newsletter">Submit your work</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="page" id="page-contact">
+  <div class="wrap">
+    <div class="page-head">
+      <h1>Contact</h1>
+      <p>Questions about events, projects or membership? Send us a message and we'll reply as soon as we can.</p>
+    </div>
+    <div class="two">
+      <div class="panel glass">
+        <h2>Find us</h2>
+        <div class="info">
+          <div class="info-row"><span class="ico" data-ic="mail"></span><div><h3>Email</h3><a id="cEmail" href="#/contact"></a></div></div>
+          <div class="info-row"><span class="ico" data-ic="phone"></span><div><h3>Phone</h3><p id="cPhone"></p></div></div>
+          <div class="info-row"><span class="ico" data-ic="pin"></span><div><h3>Meeting place</h3><p id="cAddress"></p></div></div>
+          <div class="info-row"><span class="ico" data-ic="clock"></span><div><h3>Lab hours</h3><p id="cHours"></p></div></div>
+          <div class="info-row"><span class="ico" data-ic="users"></span><div><h3>Follow us</h3><div class="social" id="socialContact"></div></div></div>
+        </div>
+      </div>
+      <div class="panel glass">
+        <h2>Send a message</h2>
+        <form id="contactForm" novalidate>
+          <div class="row2">
+            <div class="field"><label for="cName">Your name</label><input id="cName" name="name" required autocomplete="name"></div>
+            <div class="field"><label for="cMail">Email address</label><input id="cMail" name="email" type="email" required autocomplete="email"></div>
+          </div>
+          <div class="field"><label for="cTopic">Topic</label>
+            <select id="cTopic" name="topic">
+              <option>General question</option><option>Event registration</option><option>Project collaboration</option><option>Publication or newsletter</option><option>Sponsorship</option>
+            </select></div>
+          <div class="field"><label for="cMsg">Message</label><textarea id="cMsg" name="message" required placeholder="Tell us what you'd like to know"></textarea></div>
+          <div><button class="btn btn-primary" type="submit">Send message</button></div>
+        </form>
+        <div class="sent" id="sentContact" hidden role="status" aria-live="polite">
+          <h3>Your message is on its way</h3>
+          <p>Thanks for getting in touch. You can also email us at <b class="addr"></b>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= JOIN ================= -->
+<section class="page" id="page-join">
+  <div class="wrap">
+    <div class="page-head">
+      <h1>Join the society</h1>
+      <p>Membership starts with a short application. Tell us what you're curious about and we'll help you find your first project.</p>
+    </div>
+    <div class="two">
+      <div>
+        <div class="perks">
+          <div class="perk c-chem"><span class="ico" data-ic="flask" data-s="22"></span><div><h3>Hands-on workshops</h3><p>Learn techniques at the bench, not just from slides.</p></div></div>
+          <div class="perk c-bio"><span class="ico" data-ic="users" data-s="22"></span><div><h3>Mentors for your project</h3><p>Work with senior members who have done it before.</p></div></div>
+          <div class="perk c-tech"><span class="ico" data-ic="chip" data-s="22"></span><div><h3>Kits and tools</h3><p>Use sensors, microscopes and lab equipment we provide.</p></div></div>
+          <div class="perk c-research"><span class="ico" data-ic="book" data-s="22"></span><div><h3>A place to publish</h3><p>Present at events and appear in our publications.</p></div></div>
+        </div>
+        <div class="panel glass">
+          <h2>What happens next</h2>
+          <ol class="mini-steps">
+            <li><b>1</b>Send your application</li>
+            <li><b>2</b>Come to a welcome session</li>
+            <li><b>3</b>Choose an area and a project</li>
+          </ol>
+        </div>
+      </div>
+      <div class="panel glass">
+        <h2>Application form</h2>
+        <form id="joinForm" novalidate>
+          <div class="row2">
+            <div class="field"><label for="jName">Full name</label><input id="jName" name="name" required autocomplete="name"></div>
+            <div class="field"><label for="jMail">Email address</label><input id="jMail" name="email" type="email" required autocomplete="email"></div>
+          </div>
+          <div class="row2">
+            <div class="field"><label for="jPhone">Phone <span class="opt">(optional)</span></label><input id="jPhone" name="phone" type="tel" autocomplete="tel"></div>
+            <div class="field"><label for="jClass">Class or year</label><input id="jClass" name="class" required placeholder="For example, Year 11"></div>
+          </div>
+          <fieldset class="fieldset"><legend>Which area interests you most?</legend>
+            <div class="picks" id="wingPicks"></div>
+          </fieldset>
+          <div class="field"><label for="jLevel">Experience with science projects</label>
+            <select id="jLevel" name="level"><option>Complete beginner</option><option>Some experience</option><option>Experienced</option></select></div>
+          <div class="field"><label for="jMsg">What would you like to explore?</label><textarea id="jMsg" name="message" required placeholder="A question, a topic or a project idea"></textarea></div>
+          <label class="check"><input type="checkbox" id="jAgree" required><span>I will follow the lab safety rules and society guidelines.</span></label>
+          <div><button class="btn btn-primary" type="submit">Send application</button></div>
+        </form>
+        <div class="sent" id="sentJoin" hidden role="status" aria-live="polite">
+          <h3>Your application is on its way</h3>
+          <p>Thanks for applying. You can also email us at <b class="addr"></b>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap section">
+    <div class="sec-head"><h2>Questions before you apply</h2></div>
+    <div class="faq" id="faq"></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot glass">
+      <div>
+        <img data-logo="mark" src="assets/logo-mark.webp" alt="Greenway Sci-Tech &amp; Research Society" width="122" height="44">
+        <p>A student community for hands-on chemistry, biology, physics, technology and research.</p>
+        <a class="foot-mail" id="fEmail" href="#/contact">greenwayscitech.research@gmail.com</a>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#/about" data-link="about">About</a></li>
+          <li><a href="#/events" data-link="events">Events</a></li>
+          <li><a href="#/projects" data-link="projects">Projects</a></li>
+          <li><a href="#/publications" data-link="publications">Publications</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get involved</h4>
+        <ul>
+          <li><a href="#/join" data-link="join">Join Us</a></li>
+          <li><a href="#/contact" data-link="contact">Contact</a></li>
+        </ul>
+        <div class="social" id="socialFoot" style="margin-top:14px"></div>
+      </div>
+    </div>
+    <p class="copy">&copy; <span id="year"></span> Greenway Sci-Tech &amp; Research Society. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
